@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Best products under 499 & 999. Hand-picked affiliate deals updated daily">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Thrifty</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- 💻 Website Content Starts Here -->
+    <header>
+        <div class="logo">Daily Thrifty</div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="blog.html">Blog</a>
+        </nav>
+    </header>
+<div class="page-con">
+    <main>
+        <input type="text" id="searchBar" placeholder="Search for the product" onkeyup="searchProduct()">
+            <!-- Your products go here -->
+            <div id="productContainer">
+                <div class="product" data-title="satyajit" onclick="showProduct('product1')">
+                    <a href="book/atomic-habits.html">
+                        <img src="070fcd06-4288-4835-ba2e-2151cc516122.jpeg" alt="product1">
+                        <p>Logitech Mouse</p><p>$45</p>
+                    </a>
+                </div>
+                <div class="product" data-title="satyajit" onclick="showProduct('product1')">
+                    <a href="book/atomic-habits.html">
+                        <img src="070fcd06-4288-4835-ba2e-2151cc516122.jpeg" alt="product1">
+                        <p>Logitech Mouse</p><p>$45</p>
+                    </a>
+                </div>
+                <div class="product" data-title="dell keyboard" onclick="showProduct('product1')">
+                    <a href="book/atomic-habits.html">
+                        <img src="070fcd06-4288-4835-ba2e-2151cc516122.jpeg" alt="product1">
+                        <p>dell keyboard</p><p>$45</p>
+                    </a>
+                </div>
+                <div class="product" data-title="dell keyboard" onclick="showProduct('product1')">
+                    <a href="book/atomic-habits.html">
+                        <img src="070fcd06-4288-4835-ba2e-2151cc516122.jpeg" alt="product1">
+                        <p>dell keyboard</p><p>$45</p>
+                    </a>
+                </div>
+                <div class="product" data-title="satyajit" onclick="showProduct('product1')">
+                    <a href="book/atomic-habits.html">
+                        <img src="070fcd06-4288-4835-ba2e-2151cc516122.jpeg" alt="product1">
+                        <p>Logitech Mouse</p><p>$45</p>
+                    </a>
+                </div>
+                <div class="product" data-title="dell keyboard" onclick="showProduct('product1')">
+                    <a href="book/atomic-habits.html">
+                        <img src="070fcd06-4288-4835-ba2e-2151cc516122.jpeg" alt="product1">
+                        <p>dell keyboard</p><p>$45</p>
+                    </a>
+                </div>
+            </div> 
+            <p id="notFound" style="display: none;">Item Not Found 😢</p>
+    </main>
+</div>
+
+<!-- 🔎 Search Script -->
+<script>
+    function searchProduct() {
+        const input = document.getElementById("searchBar").value.toLowerCase();
+        const products = document.querySelectorAll(".product");
+        const notFound = document.getElementById("notFound");
+        let found = false;
+    
+        products.forEach(product => {
+            const title = product.getAttribute("data-title").toLowerCase();
+            if (title.includes(input)) {
+                product.style.display = "inline-block";
+                found = true;
+            } else {
+                product.style.display = "none";
+            }
+        });
+    
+        // Show "Item Not Found" if no product is visible
+        notFound.style.display = found ? "none" : "block";
+    }
+    </script>
+    
+
+<!-- ⚠️ Cookie Banner -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-links">
+            <a href="Privacy-Policy.html">Privacy Policy</a>
+            <a href="terms.html">Terms & Conditions</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <p class="copyright">© 2025 YourWebsite.com | All rights reserved.</p>
+    </div>
+</footer>
+
+<div id="cookie-banner">
+    <p>
+        This website uses cookies to improve your experience. By using our website, you agree to our 
+        <a href="Privacy-Policy.html" target="_blank">Privacy Policy</a>.
+    </p>
+    <button id="accept-cookie">Accept</button>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let cookieBanner = document.getElementById("cookie-banner");
+        let acceptButton = document.getElementById("accept-cookie");
+
+        function getCookie(name) {
+            let match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+            return match ? match[2] : null;
+        }
+
+        function acceptCookies() {
+            document.cookie = "cookiesAccepted=true; max-age=31536000; path=/";
+            cookieBanner.style.opacity = "0";
+            setTimeout(() => cookieBanner.style.display = "none", 500);
+        }
+
+        if (!getCookie("cookiesAccepted")) {
+            cookieBanner.style.display = "block";
+            setTimeout(() => cookieBanner.style.opacity = "1", 100);
+        }
+
+        acceptButton.addEventListener("click", acceptCookies);
+    });
+</script>
+<!-- ⚠️ item not found -->
+
+</body>
+</html>
