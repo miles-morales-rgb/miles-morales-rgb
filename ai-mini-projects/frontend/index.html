@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Mini Projects Hub</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #0f172a; color: #fff; }
+    header { background: #1e293b; padding: 15px; display: flex; justify-content: space-between; align-items: center; }
+    nav button { background: #334155; color: #fff; padding: 10px; border: none; margin: 0 5px; cursor: pointer; }
+    .content { padding: 20px; }
+    .tool-section { display: none; }
+    .active { display: block; }
+    textarea, input { width: 100%; padding: 10px; margin-top: 10px; border-radius: 5px; border: none; }
+    button.action-btn { margin-top: 10px; padding: 10px 20px; background: #3b82f6; border: none; color: white; border-radius: 5px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>AI Mini Projects Hub</h1>
+  <nav>
+    <button onclick="showTool('sentiment')">Sentiment</button>
+    <button onclick="showTool('resume')">Resume Screening</button>
+    <button onclick="showTool('image')">Image Colorization</button>
+  </nav>
+</header>
+
+<div class="content">
+  <div id="sentiment" class="tool-section">
+    <h2>Sentiment Analysis</h2>
+    <textarea id="sentimentInput" placeholder="Type your sentence..."></textarea>
+    <button class="action-btn" onclick="checkSentiment()">Analyze</button>
+    <p id="sentimentResult"></p>
+  </div>
+
+  <div id="resume" class="tool-section">
+    <h2>Resume Screening</h2>
+    <textarea id="resumeInput" placeholder="Paste your resume text..."></textarea>
+    <button class="action-btn" onclick="checkResume()">Check Match</button>
+    <p id="resumeResult"></p>
+  </div>
+
+  <div id="image" class="tool-section">
+    <h2>Image Colorization (Demo UI)</h2>
+    <input type="file" id="colorImageInput">
+    <button class="action-btn">Upload (Backend Needed)</button>
+    <p>Note: Actual colorization requires backend processing.</p>
+  </div>
+</div>
+
+<script>
+  function showTool(toolId) {
+    document.querySelectorAll('.tool-section').forEach(section => section.classList.remove('active'));
+    document.getElementById(toolId).classList.add('active');
+  }
+
+  function checkSentiment() {
+    const text = document.getElementById('sentimentInput').value;
+    fetch("http://127.0.0.1:5000/sentiment", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ text: text })
+    })
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById('sentimentResult').innerText = `Result: ${data.result} (Polarity: ${data.polarity})`;
+    });
+  }
+
+  function checkResume() {
+    const text = document.getElementById('resumeInput').value.toLowerCase();
+    const keywords = ["python", "machine learning", "ai"];
+    const matches = keywords.filter(keyword => text.includes(keyword));
+    document.getElementById('resumeResult').innerText = `Matched: ${matches.join(", ")}`;
+  }
+</script>
+
+</body>
+</html>
