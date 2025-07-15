@@ -35,16 +35,16 @@ ai-mini-projects/
 
 ### 1️⃣ Clone This Repository:
 
-**bash**
-*git clone https://github.com/miles-morales-rgb/ai-mini-projects.git*
-*cd ai-mini-projects*
+- **bash**
+- git clone https://github.com/miles-morales-rgb/ai-mini-projects.git
+- cd ai-mini-projects
 
 ### 2️⃣ Run the Backend (Python Flask)
-- Make sure Python is installed on your system.
-bash
-cd backend
-pip install -r requirements.txt
-python server.py
+- **Make sure Python is installed on your system.**
+- **bash**
+- cd backend
+- pip install -r requirements.txt
+- python server.py
 
 The backend will run at:
 http://127.0.0.1:5000
@@ -72,9 +72,9 @@ Go to frontend folder and open index.html in your browser:
 - Backend can be deployed using platforms like Render, Railway, or PythonAnywhere.
 ---
 
-### 🤝 Contributions
+### 🤝 Contributions:
 Feel free to fork, improve, or suggest features.
 ---
 
-### 📄 License 
+### 📄 License:
 Open-source project for educational purposes.
