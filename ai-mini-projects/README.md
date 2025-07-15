@@ -36,10 +36,13 @@ ai-mini-projects/
 ### 1️⃣ Clone This Repository:
 
 bash
+
 git clone https://github.com/miles-morales-rgb/ai-mini-projects.git
+
 cd ai-mini-projects
 
-2️⃣ Run the Backend (Python Flask)
+### 2️⃣ Run the Backend (Python Flask)
+
 Make sure Python is installed on your system.
 
 bash
