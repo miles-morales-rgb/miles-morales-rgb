@@ -36,15 +36,11 @@ ai-mini-projects/
 ### 1️⃣ Clone This Repository:
 
 bash
-
 git clone https://github.com/miles-morales-rgb/ai-mini-projects.git
-
 cd ai-mini-projects
 
 ### 2️⃣ Run the Backend (Python Flask)
-
 Make sure Python is installed on your system.
-
 bash
 cd backend
 pip install -r requirements.txt
@@ -53,12 +49,12 @@ python server.py
 The backend will run at:
 http://127.0.0.1:5000
 
-3️⃣ Open the Frontend
+### 3️⃣ Open the Frontend
 Go to frontend folder and open index.html in your browser:
 ● Windows: Double-click index.html
 ● Mac/Linux: Right-click → Open With → Your Browser
 
-⚙️ How It Works:
+### ⚙️ How It Works:
 ● HTML/JS sends requests to Flask backend (for example, Sentiment Analysis).
 ● Flask processes and sends back JSON response.
 ● UI updates with the result.
