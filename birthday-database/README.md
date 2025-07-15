@@ -1,17 +1,14 @@
-birthdays = {'Alice': 'Apr 1', 'Bob': 'Dec 12', 'Carol': 'Mar 4'}
+# Birthday Database Lookup Script
 
-while True:
-    print('Enter a name: (blank to quit)')
-    name = input()
+This is a basic Python script that stores and retrieves birthday information.  
+If a name is not found in the database, the user can add it manually.
 
-    if name == '':
-        break
+## 📋 Features
+- Look up birthdays by name
+- Add new birthday information interactively
+- Automatically updates the in-memory database
 
-    if name in birthdays:
-        print(birthdays[name] + ' is the birthday of ' + name)
-    else:
-        print('I do not have birthday information for ' + name)
-        print('What is their birthday?')
-        bday = input()
-        birthdays[name] = bday
-        print('Birthday database updated.')
+## 💻 How to Use
+
+1. Make sure Python is installed on your system.
+2. Run the script using:
