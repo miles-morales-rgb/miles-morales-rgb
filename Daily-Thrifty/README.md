@@ -25,13 +25,21 @@ It includes a product browsing section with search functionality, as well as a b
 
 ## 📂 Project Structure
 Daily-Thrift/
+
 │
+
 ├── index.html # Home Page
+
 ├── blog.html # Blog Section
+
 ├── css/
+
 │ └── style.css # Main Stylesheet
+
 ├── js/
+
 │ └── script.js # JavaScript Functionality
+
 └── README.md # Project
 
 
