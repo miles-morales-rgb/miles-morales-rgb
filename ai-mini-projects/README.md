@@ -41,36 +41,40 @@ ai-mini-projects/
 
 ### 2️⃣ Run the Backend (Python Flask)
 - Make sure Python is installed on your system.
-- bash
-- cd backend
-- pip install -r requirements.txt
-- python server.py
+bash
+cd backend
+pip install -r requirements.txt
+python server.py
 
-- The backend will run at:
-- http://127.0.0.1:5000
+The backend will run at:
+http://127.0.0.1:5000
 
 ### 3️⃣ Open the Frontend
 Go to frontend folder and open index.html in your browser:
-● Windows: Double-click index.html
-● Mac/Linux: Right-click → Open With → Your Browser
+- Windows: Double-click index.html
+- Mac/Linux: Right-click → Open With → Your Browser
 
 ### ⚙️ How It Works:
-● HTML/JS sends requests to Flask backend (for example, Sentiment Analysis).
-● Flask processes and sends back JSON response.
-● UI updates with the result.
+- HTML/JS sends requests to Flask backend (for example, Sentiment Analysis).
+- Flask processes and sends back JSON response.
+- UI updates with the result.
+---
 
-✅ Technologies Used:
-● Frontend: HTML, CSS, JavaScript (Fetch API)
-● Backend: Python, Flask, Flask-CORS, TextBlob
-● AI/NLP: TextBlob for Sentiment Analysis
+### ✅ Technologies Used:
+- Frontend: HTML, CSS, JavaScript (Fetch API)
+- Backend: Python, Flask, Flask-CORS, TextBlob
+- AI/NLP: TextBlob for Sentiment Analysis
+---
 
-📢 Notes:
-● Image Colorization is UI Only here. You’ll need to connect it to a Python model if required.
-● You can deploy frontend separately using GitHub Pages, Vercel, or Netlify.
-● Backend can be deployed using platforms like Render, Railway, or PythonAnywhere.
+### 📢 Notes:
+- Image Colorization is UI Only here. You’ll need to connect it to a Python model if required.
+- You can deploy frontend separately using GitHub Pages, Vercel, or Netlify.
+- Backend can be deployed using platforms like Render, Railway, or PythonAnywhere.
+---
 
-🤝 Contributions
+### 🤝 Contributions
 Feel free to fork, improve, or suggest features.
+---
 
-📄 License 
+### 📄 License 
 Open-source project for educational purposes.
