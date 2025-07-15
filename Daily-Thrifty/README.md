@@ -24,7 +24,6 @@ It includes a product browsing section with search functionality, as well as a b
 ---
 
 ## 📂 Project Structure
-
 Daily-Thrift/
 │
 ├── index.html # Home Page
