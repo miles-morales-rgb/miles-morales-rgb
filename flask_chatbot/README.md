@@ -28,7 +28,7 @@ flask_chatbot/
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/flask_chatbot.git
+git clone https://github.com/miles-morales-rgb/flask_chatbot.git
 cd flask_chatbot
 ```
 
