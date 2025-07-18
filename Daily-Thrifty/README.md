@@ -48,8 +48,9 @@ Daily-Thrift/
 ## 🚀 Getting Started
 
 ### 1️⃣ Clone the Repository
+```bash
 git clone https://github.com/miles-morales-rgb/Daily-Thrift.git
-
+```
 2️⃣ Open Locally
 - Open index.html in your browser to preview the website.
 
