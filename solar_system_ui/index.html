@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Solar System UI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="stars"></div>
+  <div class="solar-system" id="solarSystem">
+    <div class="planet jupiter" data-name="Jupiter" data-info="The largest planet in our Solar System."></div>
+    <div class="planet saturn" data-name="Saturn" data-info="Famous for its prominent ring system."></div>
+    <div class="planet uranus" data-name="Uranus" data-info="An ice giant with a unique tilt."></div>
+    <div class="planet neptune" data-name="Neptune" data-info="The farthest planet, deep blue and stormy."></div>
+    <div class="comet"></div>
+  </div>
+
+  <div class="info-box" id="infoBox">
+    <span id="infoClose">&times;</span>
+    <h2 id="planetName"></h2>
+    <p id="planetInfo"></p>
+  </div>
+
+  <div class="controls">
+    <button onclick="zoomIn()">Zoom In</button>
+    <button onclick="zoomOut()">Zoom Out</button>
+  </div>
+
+  <audio id="hoverSound" src="sounds/hover.mp3" preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>

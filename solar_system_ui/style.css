@@ -1,0 +1,137 @@
+body {
+  margin: 0;
+  background-color: black;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+.stars {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(black, #000022);
+  z-index: -2;
+  animation: twinkle 20s linear infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% { background-position: 0 0; }
+  50% { background-position: 100% 100%; }
+}
+
+.solar-system {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.planet {
+  position: absolute;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.jupiter {
+  width: 80px; height: 80px;
+  background: orange;
+  top: 30%; left: 40%;
+  animation: orbitJupiter 10s linear infinite;
+}
+
+.saturn {
+  width: 70px; height: 70px;
+  background: goldenrod;
+  top: 20%; left: 60%;
+  animation: orbitSaturn 14s linear infinite;
+}
+
+.uranus {
+  width: 60px; height: 60px;
+  background: lightblue;
+  top: 50%; left: 20%;
+  animation: orbitUranus 18s linear infinite;
+}
+
+.neptune {
+  width: 60px; height: 60px;
+  background: blue;
+  top: 70%; left: 70%;
+  animation: orbitNeptune 22s linear infinite;
+}
+
+.comet {
+  width: 15px;
+  height: 15px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: cometTrail 10s linear infinite;
+  box-shadow: 0 0 15px white, 0 0 30px cyan;
+}
+
+@keyframes orbitJupiter {
+  0% { transform: rotate(0deg) translateX(120px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(120px) rotate(-360deg); }
+}
+
+@keyframes orbitSaturn {
+  0% { transform: rotate(0deg) translateX(160px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(160px) rotate(-360deg); }
+}
+
+@keyframes orbitUranus {
+  0% { transform: rotate(0deg) translateX(200px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(200px) rotate(-360deg); }
+}
+
+@keyframes orbitNeptune {
+  0% { transform: rotate(0deg) translateX(240px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(240px) rotate(-360deg); }
+}
+
+@keyframes cometTrail {
+  0% { top: 100%; left: -10%; }
+  100% { top: -10%; left: 110%; }
+}
+
+.info-box {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(0,0,0,0.8);
+  color: white;
+  padding: 15px;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  display: none;
+  z-index: 10;
+}
+
+.info-box span {
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+.controls {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+.controls button {
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background: #fff;
+  color: black;
+  cursor: pointer;
+}
