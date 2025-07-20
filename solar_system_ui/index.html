@@ -2,32 +2,113 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Solar System UI</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Solar System Animation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: radial-gradient(circle, #000000, #0d1b2a);
+      overflow: hidden;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .solar-system {
+      position: relative;
+      width: 600px;
+      height: 600px;
+    }
+
+    .sun {
+      width: 80px;
+      height: 80px;
+      background: radial-gradient(circle, #ffcc00, #ff9900);
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 0 30px #ffb300;
+    }
+
+    .orbit {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border: 1px dashed rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .planet {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform-origin: -50% center;
+      border-radius: 50%;
+    }
+
+    .planet span {
+      display: block;
+      border-radius: 50%;
+    }
+
+    .mercury { width: 100px; height: 100px; animation: orbit 4s linear infinite; }
+    .venus { width: 140px; height: 140px; animation: orbit 7s linear infinite; }
+    .earth { width: 180px; height: 180px; animation: orbit 10s linear infinite; }
+    .mars { width: 220px; height: 220px; animation: orbit 14s linear infinite; }
+    .jupiter { width: 270px; height: 270px; animation: orbit 18s linear infinite; }
+    .saturn { width: 320px; height: 320px; animation: orbit 22s linear infinite; }
+    .uranus { width: 370px; height: 370px; animation: orbit 26s linear infinite; }
+    .neptune { width: 420px; height: 420px; animation: orbit 30s linear infinite; }
+
+    .mercury span { background: gray; width: 8px; height: 8px; }
+    .venus span { background: #f5deb3; width: 10px; height: 10px; }
+    .earth span { background: #2e86de; width: 12px; height: 12px; }
+    .mars span { background: #c1440e; width: 10px; height: 10px; }
+    .jupiter span { background: #d2b48c; width: 20px; height: 20px; }
+    .saturn span { background: #deb887; width: 18px; height: 18px; }
+    .uranus span { background: #7fffd4; width: 16px; height: 16px; }
+    .neptune span { background: #4169e1; width: 16px; height: 16px; }
+
+    @keyframes orbit {
+      from { transform: rotate(0deg) translateX(50%) rotate(0deg); }
+      to { transform: rotate(360deg) translateX(50%) rotate(-360deg); }
+    }
+
+    @media (max-width: 768px) {
+      .solar-system {
+        transform: scale(0.6);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .solar-system {
+        transform: scale(0.45);
+      }
+    }
+  </style>
 </head>
 <body>
-  <div class="stars"></div>
-  <div class="solar-system" id="solarSystem">
-    <div class="planet jupiter" data-name="Jupiter" data-info="The largest planet in our Solar System."></div>
-    <div class="planet saturn" data-name="Saturn" data-info="Famous for its prominent ring system."></div>
-    <div class="planet uranus" data-name="Uranus" data-info="An ice giant with a unique tilt."></div>
-    <div class="planet neptune" data-name="Neptune" data-info="The farthest planet, deep blue and stormy."></div>
-    <div class="comet"></div>
+  <div class="solar-system">
+    <div class="sun"></div>
+    
+    <div class="planet mercury"><span></span></div>
+    <div class="planet venus"><span></span></div>
+    <div class="planet earth"><span></span></div>
+    <div class="planet mars"><span></span></div>
+    <div class="planet jupiter"><span></span></div>
+    <div class="planet saturn"><span></span></div>
+    <div class="planet uranus"><span></span></div>
+    <div class="planet neptune"><span></span></div>
   </div>
-
-  <div class="info-box" id="infoBox">
-    <span id="infoClose">&times;</span>
-    <h2 id="planetName"></h2>
-    <p id="planetInfo"></p>
-  </div>
-
-  <div class="controls">
-    <button onclick="zoomIn()">Zoom In</button>
-    <button onclick="zoomOut()">Zoom Out</button>
-  </div>
-
-  <audio id="hoverSound" src="sounds/hover.mp3" preload="auto"></audio>
-  <script src="script.js"></script>
 </body>
 </html>
