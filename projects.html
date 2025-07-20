@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - Satyajit Rout</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0b0c10;
+      color: #fff;
+      padding: 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #1f2833;
+      padding: 1rem 2rem;
+    }
+
+    nav .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #66fcf1;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #66fcf1;
+    }
+
+    .projects-container {
+      padding: 2rem;
+    }
+
+    .project-card {
+      background-color: #1f2833;
+      border: 1px solid #45a29e;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-card h3 {
+      color: #66fcf1;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-card a {
+      display: inline-block;
+      margin-top: 1rem;
+      background-color: #45a29e;
+      color: #0b0c10;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .project-card a:hover {
+      background-color: #66fcf1;
+    }
+
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="logo">Satyajit Rout</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+    </ul>
+  </nav>
+
+  <section class="projects-container">
+    <h1>My Projects</h1>
+
+    <div class="project-card">
+      <h3>🌌 Solar System UI</h3>
+      <p>An interactive and animated solar system built with HTML, CSS, and JavaScript. Includes comets, sound on hover, planet info on click, and a zoom system!</p>
+      <a href="solar_system_ui/index.html" target="_blank">🌍 View Project</a>
+    </div>
+
+    <!-- Add more project cards here -->
+
+  </section>
+</body>
+
+</html>
