@@ -1,71 +1,59 @@
-# 🌌 Interactive Solar System UI
+# 🌌 Solar System Animation
 
-This is a responsive and animated solar system simulation using **HTML, CSS, and JavaScript**, with interactivity, animations, hover sound effects, and click-triggered info boxes.
+This project is a visually engaging, responsive solar system animation created using **HTML** and **CSS**. The planets revolve around the sun in realistic orbits with animated motion, all without using JavaScript.
 
 ## 🚀 Features
 
-- ✅ Animated orbits for planets
-- ✅ Planets: Mercury to Neptune (including Jupiter, Saturn, Uranus, Neptune)
-- ✅ Click planets to view info
-- ✅ Hover sound effects (JARVIS-style)
-- ✅ Comets with glowing trails
-- ✅ Starry animated background
-- ✅ Zoom in/out buttons
-- ✅ Fully responsive on all devices
+- Animated rotation of all 8 major planets around the sun
+- Beautiful radial gradient space background
+- Realistic orbit speeds and sizes for each planet
+- Scalable and responsive design for mobile and desktop
+- Pure HTML + CSS (no JavaScript)
 
----
-
-## 🎮 How to Use
-
-1. **Download** or clone the repository.
-2. Open `index.html` in your browser.
-3. Click or hover on planets to explore.
-
----
-
-## 📁 File Structure
+## 📂 Project Structure
 
 solar_system_ui/
 
-│
+├── index.html
 
-├── index.html # Main HTML structure
+└── README.md
 
-├── style.css # CSS animations and styling
+## 🌍 Live Demo
 
-├── script.js # Interactions, zoom, sound
+To view the solar system animation, simply open `index.html` in your browser.
 
-└── sounds/
+## 📱 Responsive Design
 
-└── hover.mp3 # Sound played on hover
+The animation scales down on tablets and smartphones using media queries for a better experience on small screens.
 
+## ✨ Technologies Used
 
+- **HTML5**
+- **CSS3** (Animations, Transforms, Media Queries)
+
+## 🧠 Learning Goals
+
+This project helps understand:
+- CSS keyframe animations
+- Transform and translate functions
+- CSS positioning and responsiveness
+- Simulating orbits using pure CSS
+
+## 🔧 How to Use
+
+1. Clone or download the project
+2. Open `index.html` in any browser (Chrome recommended for smooth animations)
+
+```bash
+git clone https://github.com/your-username/solar-system-animation.git
+cd solar-system-animation
+open index.html
+```
 ---
-
-## 🔊 Customizing Sound
-
-Replace `sounds/hover.mp3` with your own sound (e.g., from [freesound.org](https://freesound.org)).
-
+### 📌 Notes: 
+- No external dependencies
+- Completely runs in the browser
+- Modify orbit speeds and planet sizes in CSS if you'd like to customize the simulation
 ---
-
-## 🛠️ Future Ideas
-
-- Add moons
-- Add orbit speed controls
-- Toggle between night/day mode
-  
----
-
-## 👨‍💻 Author
-
-Built with ❤️ using HTML, CSS & JS by Satyajit Rout 
-
----
-
-## 🪐 License
-
-MIT License – Free to use with attribution.
-
-
-
-
+### 📜 License :
+This project is licensed under the MIT License.
