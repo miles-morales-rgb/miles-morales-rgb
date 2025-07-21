@@ -18,19 +18,19 @@
       color: #ffffff;
       line-height: 1.6;
     }
-
+    
     nav {
-      background-color: #1a1a1a;
-      padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 2px solid #444;
+      background-color: #1f2833;
+      padding: 1rem 2rem;
     }
 
-    nav h1 {
+    nav .logo {
       font-size: 1.5rem;
-      color: #00d1ff;
+      font-weight: bold;
+      color: #66fcf1;
     }
 
     nav ul {
@@ -39,15 +39,15 @@
       gap: 1.5rem;
     }
 
-    nav a {
-      color: #ffffff;
+    nav ul li a {
+      color: #fff;
       text-decoration: none;
       font-weight: 500;
-      transition: color 0.3s ease;
+      transition: color 0.3s;
     }
 
-    nav a:hover {
-      color: #00d1ff;
+    nav ul li a:hover {
+      color: #66fcf1;
     }
 
     .container {
@@ -84,7 +84,7 @@
 </head>
 <body>
   <nav>
-    <h1>Satyajit Rout</h1>
+    <div class="logo">Satyajit Rout</div>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="projects.html">Projects</a></li>
