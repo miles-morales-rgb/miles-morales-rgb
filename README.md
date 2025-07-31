@@ -3,8 +3,9 @@
 </p>
 
 <p align="center">
-  <img src="https://github.com/miles-morales-rgb/miles-morales-rgb/assets/your-gif-id/sample-ai-animation.gif" height="250" alt="Animated banner" />
+  <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" height="250" alt="Animated AI Banner" />
 </p>
+
 
 <h1 align="center">Hey 👋, I'm Satyajit Rout</h1>
 <h3 align="center">🚀 Future AI/ML Developer | 💻 Web Dev Enthusiast | 🧠 Lifelong Learner</h3>
